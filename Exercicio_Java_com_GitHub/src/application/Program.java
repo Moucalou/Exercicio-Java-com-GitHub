@@ -26,8 +26,6 @@ public class Program {
 			int num = sc.nextInt();
 			sc.nextLine();
 			
-			
-		
 			switch (num) {
 			case 1:
 				System.out.print("Please enter the product name: ");
@@ -35,7 +33,7 @@ public class Program {
 				list.add(product);
 				break;
 			case 2:
-				System.out.println("=== Products List ===");
+				System.out.println("=== PRODUCTS LIST ===");
 				for (int i = 0; i < list.size(); i++) {
 					System.out.println("Product #" + (i + 1) + ": " + list.get(i));
 				}
@@ -53,8 +51,18 @@ public class Program {
 				System.out.print("Enter the new product name: ");
 				product = sc.nextLine();
 				list.set((listnum - 1), product);
+				System.out.println("=== UPDATED LIST ===");
+				for (int i = 0; i < list.size(); i++) {
+					System.out.println("Product #" + (i + 1) + ": " + list.get(i));
+				}
+				break;
+			case 5:
+				answer = 'n';
+				break;
 			}
+			
+			System.out.print("Do you want to continue to edit the products? (y/n):");
+			answer = sc.next().charAt(0);
 		}
 	}
 }
-
